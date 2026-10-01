@@ -1,0 +1,73 @@
+package DCLcource;
+
+class Musicplayer implements Runnable{
+
+
+	public void run() {
+	try {
+		for(int i=1;i<=5;i++) {
+			System.out.println("Music playing"+i);
+			Thread.sleep(4000); 
+			
+		}
+		
+		
+	}
+	catch (Exception e) {
+		System.out.println(e.getMessage());
+	}
+		
+	}
+}
+	class DownloadManager implements Runnable{
+
+
+		public void run() {
+		try {
+			for(int i=10;i<=100;i+=10) {
+				System.out.println("Download progress" + i +"%");
+				Thread.sleep(4000);
+				
+			}
+			
+			
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+			
+		}
+	}
+		class Temp implements Runnable{
+
+
+			public void run() {
+			int Celsius = 30;
+			double farenheit = (Celsius * 9.0/5)+32;
+			System.out.println("Celsius is "+Celsius);
+			System.out.println("farenheit is "+farenheit);
+			}
+										
+				}
+			
+
+	
+
+public class test11 {
+
+	public static void main(String[] args) {
+		Musicplayer m1 = new Musicplayer();
+		DownloadManager d1 = new DownloadManager();
+		Temp t1 = new Temp();	
+		
+		Thread x=new Thread(m1);
+		Thread y =new Thread(d1);
+		Thread z=new Thread(t1);
+		x.start();
+		y.start();
+		z.start();
+		
+
+	}
+
+}

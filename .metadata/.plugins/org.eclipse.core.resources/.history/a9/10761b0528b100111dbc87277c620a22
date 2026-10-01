@@ -1,0 +1,17 @@
+package com.numbers;
+
+public class PrimeNum {
+	public static int primeNumber(int n) {
+		int i = 2;
+		boolean isPrime = true;
+		while(i<n) {
+			if(n%i==0) {
+				isPrime= false;
+				i++;
+			}
+		}
+		return i;
+		
+	}
+
+}

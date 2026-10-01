@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="com.itextpdf.text.Document"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="com.itextpdf.text.pdf.PdfWriter"/>
+    <fullyQualifiedTypeName name="com.itextpdf.text.Paragraph"/>
+    <fullyQualifiedTypeName name="com.itextpdf.text.Font.FontFamily"/>
+    <fullyQualifiedTypeName name="java.awt.Font"/>
+    <fullyQualifiedTypeName name="com.itextpdf.text.BaseColor"/>
+    <fullyQualifiedTypeName name="java.lang.annotation.ElementType"/>
+    <fullyQualifiedTypeName name="com.itextpdf.text.Element"/>
+    <fullyQualifiedTypeName name="com.itextpdf.text.Font"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.dcl.Count_digits"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

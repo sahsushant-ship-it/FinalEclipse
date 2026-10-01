@@ -1,0 +1,55 @@
+package DCLcource;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+
+class Student {
+	 String name;
+	 int fees;
+	 int id;
+	 
+	 
+	Student(String name, int fees,int id){
+		this.name = name;
+		this.fees = fees;
+		this.id = id;
+	}
+ }
+
+  class stFeesCompare implements Comparator<Student>{
+	   
+   
+
+	
+	public int compare(Student s1, Student s2) {
+		return s1.fees - s2.fees;
+	
+	}
+
+}
+   
+ class Test2{
+	public static void main(String[] args) {
+		Student s1 = new Student("guldu",120000,101);
+		Student s2 = new Student("basu",120000,106);
+		Student s3 = new Student("krishna",100000,107);
+		Student s4 = new Student("hari",80000,105);
+		
+		LinkedList<Student> a1 = new LinkedList<>();
+		Collections.addAll(a1, s1,s2,s3,s4);
+		stFeesCompare St=new stFeesCompare();
+		Collections.sort(a1, St);
+		
+		
+		for(Student s : a1) {
+			System.out.println(s.name+" "+s.fees+" "+s.id);
+		}
+		
+		
+		
+		
+		
+	}
+}

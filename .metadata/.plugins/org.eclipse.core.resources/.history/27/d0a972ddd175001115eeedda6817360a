@@ -1,0 +1,28 @@
+package DCLcource;
+
+
+import java.util.Collections;
+import java.util.LinkedList;
+
+class Mobile implements Comparable<Mobile>  {
+	String brand;
+    int price;
+    
+    Mobile(String brand, int price){
+    	this.brand = brand;
+    	this.price = price;
+    }
+	
+	public int compareTo(Mobile mob) {
+              return this.brand.compareTo(mob.brand)   ;   
+	}
+
+}
+public class Test1 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

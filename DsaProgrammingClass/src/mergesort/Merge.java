@@ -1,0 +1,39 @@
+package mergesort;
+
+import java.util.Arrays;
+
+public class Merge {
+	public static void merge(int[] arr1, int[] arr2, int[] res) {
+		int i = 0;
+		int j = 0;
+		int k =0;
+		while(i<arr1.length && j<arr2.length) {
+			if(arr1[i]<arr2[j]) {
+				res[k]=arr1[i];
+				i++;
+				k++;
+			} else {
+				res[k]=arr2[j];
+			j++;
+			k++;
+			}
+		}
+		while(j<arr2.length) {
+			res[k]=arr2[j];
+			j++;
+			k++;
+		}
+		while(i<arr1.length) {
+			res[k]=arr1[i];
+			i++;
+			k++;
+		}
+	}
+	public static void main(String[] args) {
+		int[] arr1= {2,4,6};
+		int[] arr2= {1,3,5,7,9,11};
+		int[] res = new int [arr1.length+arr2.length];
+		merge(arr1,arr2,res);
+		System.out.println(Arrays.toString(res));
+	}
+}

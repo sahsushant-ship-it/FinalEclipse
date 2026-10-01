@@ -1,0 +1,19 @@
+package arrays;
+
+import java.util.Arrays;
+
+public class ReverseArrays {
+	public static int[] reverseArrays(int[] arr) {
+		int[] res= new int[arr.length];
+		int i= arr.length-1;
+		int k =0;
+		while(i>=0) {
+			arr[k]=arr[i];
+			k++;
+			i--;
+		}
+		return res;
+		
+	}
+
+}

@@ -1,0 +1,37 @@
+package punithsirjava;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Demo1 {
+	public static void main(String[] args) {
+		File f1 =new File("test1.txt");
+		File f2 =new File("C:\\Users\\Asus\\Desktop\\final\\final.2.txt");
+		
+		try {
+			boolean status=f1.CreateNewFile();
+			boolean status1=f2.CreateNewFile();
+			
+			if(status) {
+				System.out.println("1st file is craeted");
+				
+			}
+			else {
+				System.out.println("1st file is not craeted");
+			}
+			if(status1) {
+				System.out.println("2nd file is creted");
+			}
+			else {
+				System.out.println("2nd file is not created");
+			}
+			
+		}
+		
+		catch(IOException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}

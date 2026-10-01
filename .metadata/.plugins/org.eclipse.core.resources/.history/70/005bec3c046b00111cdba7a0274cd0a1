@@ -1,0 +1,93 @@
+package DCLcource;
+class Movie extends Thread{
+	String Producer = "vijay";
+	String Director = "Prashanth neel ";
+	String actor = "Yash";
+	String artist = "Artists";
+	public void run() {
+		if(getName().equals("Producer")) {
+			Producing();
+		}
+		else if(getName().equals("Director")) {
+			Directing();
+		}
+		else if(getName().equals("actor")) {
+			Acting();
+		}
+	}
+	
+	void Producing() {
+		try {
+			for (int i=0;i<=4;i++) {
+			System.out.println(Producer + "is producing a movie");
+			Thread.sleep(4000);
+			}
+			System.out.println(Producer + "has stopped Producing a movie");
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	void Directing() {
+		try {
+			for(;;) {
+				System.out.println(Director + "is directing a movie");
+				Thread.sleep(4000);
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	void Acting() {
+		try {
+			for(;;) {
+				System.out.println(actor + "is acting in a movie");
+				Thread.sleep(4000);
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	void supporting() {
+		try {
+			for(;;) {
+				System.out.println(artist + "is supporting in a movie");
+				Thread.sleep(4000);
+			}
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+			}
+		}
+}
+public class test15 {
+
+	public static void main(String[] args) {
+		Movie m1 = new Movie();
+		Movie m2 = new Movie();
+		Movie m3 = new Movie();
+		Movie m4 = new Movie();
+		m1.setName("Producer");
+		m2.setName("Director");
+		m3.setName("actor");
+		m4.setName("artist");
+		
+        m2.setDaemon(true);
+		m3.setDaemon(true);
+		m4.setDaemon(true);
+		
+		m1.start();
+		m2.start();
+		m3.start();
+		m4.start();
+
+		
+		
+		
+
+	}
+
+}

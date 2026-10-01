@@ -1,0 +1,39 @@
+package DCLcource;
+
+public class Demo {
+	void fun1() {
+		System.out.println("entering fun1...");
+		try {
+			fun2();
+		}
+		catch(Exception e) {
+			System.out.println("problem in fun1....");
+			throw e;
+		}
+	}
+	void fun2() {
+		try {
+			System.out.println("entering fun2....");
+		int x,y,z;
+		x=30;y=0;
+		z=x/y;}
+		catch (Exception e) {
+			System.out.println("exception in fun2");
+			throw e;
+		}
+	}
+	
+
+}
+
+ class Rethroughing {
+	public static void main(String[] args) {
+		Demo d1 = new Demo();
+		try {
+			d1.fun1();
+		}
+		catch(Exception e) {
+			System.out.println("problem in main.....");
+		}
+	}
+}

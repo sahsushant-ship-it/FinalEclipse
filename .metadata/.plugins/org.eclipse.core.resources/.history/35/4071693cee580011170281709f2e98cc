@@ -1,0 +1,5 @@
+package javainter;
+
+public interface Switch {
+
+}

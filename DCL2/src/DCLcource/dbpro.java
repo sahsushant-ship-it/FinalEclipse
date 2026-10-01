@@ -1,0 +1,62 @@
+package DCLcource;
+
+class DbProcess implements Runnable{  
+	String r1 = "Oracle";
+	String r2 ="sybase";
+	String r3 ="Informics";
+	
+	public void run() {
+		if(Thread.currentThread().getName().equals("Rama")) {
+			aquireRamaResource();
+		}
+		else {
+			aquireSitaResource();
+		}
+		
+	}
+	void aquireRamaResource() {
+		synchronized (r1) {
+			System.out.println("Rama aquired oracle");
+			synchronized (r2) {
+				System.out.println("Rama aquired sybase");
+				synchronized (r3) {
+					System.out.println("Rama aquired informics");
+			
+				}
+			}
+		}
+	
+}
+		void aquireSitaResource() {
+			
+			synchronized (r3) {
+				System.out.println("Rama aquired informics");
+				synchronized (r1) {
+					System.out.println("Rama aquired oracle");
+					synchronized (r2) {
+						System.out.println("Rama aquired sybase");
+					}
+
+		}
+			
+			}
+		}
+}
+
+public class dbpro {
+
+	public static void main(String[] args) {
+		DbProcess db = new DbProcess();
+		Thread t1 = new Thread(db);
+		Thread t2 = new Thread(db);
+		t1.setName("Rama");
+		t2.setName("sita");
+		t1.start();
+		t2.start();
+		
+	}
+
+	}
+
+
+

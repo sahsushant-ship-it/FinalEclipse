@@ -1,0 +1,24 @@
+package DCLcource;
+
+class station implements Runnable{
+	string name;
+	station(String name){
+		this.name=name
+		}
+		
+
+	public void run() {
+	
+		
+	}
+		
+}
+
+public class test26 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
